@@ -43,19 +43,3 @@ python3 -m http.server 8080
 ```
 
 并访问 `http://127.0.0.1:8080/`。
-
-## 网站部署（简单推荐）
-
-如果你已经完成本地预览，下一步可以直接看部署文档：
-
-- 详细说明：`DEPLOYMENT.md`
-- 一键上传脚本（上传到你的服务器）：`deploy.sh`
-
-快速示例（上传到云服务器）：
-
-```bash
-./deploy.sh ubuntu@YOUR_SERVER_IP /var/www/ayotee
-```
-
-上传后按 `DEPLOYMENT.md` 里的 Nginx 配置启用即可。
-
