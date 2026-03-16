@@ -43,3 +43,32 @@ python3 -m http.server 8080
 ```
 
 并访问 `http://127.0.0.1:8080/`。
+
+## 网站部署（简单推荐）
+
+如果你已经完成本地预览，下一步可以直接看部署文档：
+
+- 详细说明：`DEPLOYMENT.md`
+- 一键上传脚本（上传到你的服务器）：`deploy.sh`
+
+快速示例（上传到云服务器）：
+
+```bash
+./deploy.sh ubuntu@YOUR_SERVER_IP /var/www/ayotee
+```
+
+上传后按 `DEPLOYMENT.md` 里的 Nginx 配置启用即可。
+
+### Cloudflare Wrangler 报错修复
+
+如果你遇到：
+`Missing entry-point to Worker script or to assets directory`
+
+直接在仓库根目录执行：
+
+```bash
+npx wrangler deploy
+```
+
+本仓库已包含 `wrangler.jsonc`，会把当前目录作为静态资源目录部署。
+
